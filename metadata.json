@@ -1,0 +1,7 @@
+{
+  "name": "Checklist Maestro Pro",
+  "description": "Una aplicación elegante para la gestión de checklists diarios con carga de evidencia fotográfica, generación de reportes PDF inteligentes y estética profesional.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
