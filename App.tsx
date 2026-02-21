@@ -46,17 +46,17 @@ const App: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.inspectorName || !formData.location) {
-      alert('Por favor completa los datos básicos (Inspector y Ubicación)');
+      alert('Por favor completa los datos básicos (Voluntario y Ubicación)');
       return;
     }
 
     setAppState(AppState.SUBMITTING);
-    setLoadingMsg('Analizando inspección con IA...');
+    setLoadingMsg('Analizando inspección');
     
     const summary = await generateProfessionalSummary(formData);
     setFormData(prev => ({ ...prev, summary }));
     
-    setLoadingMsg('Preparando reporte técnico estético...');
+    setLoadingMsg('Preparando reporte electrico');
     setTimeout(() => {
       setAppState(AppState.COMPLETED);
     }, 1500);
@@ -102,7 +102,7 @@ const App: React.FC = () => {
       <div className="min-h-screen flex flex-col items-center justify-center bg-white p-6">
         <Loader2 className="w-12 h-12 text-indigo-600 animate-spin mb-4" />
         <h2 className="text-xl font-bold text-gray-800">{loadingMsg}</h2>
-        <p className="text-gray-500 mt-2 text-center max-w-sm">Estamos procesando sus respuestas para generar un documento profesional.</p>
+        <p className="text-gray-500 mt-2 text-center max-w-sm">Estamos procesando sus respuestas para generar un documento PDF</p>
       </div>
     );
   }

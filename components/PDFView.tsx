@@ -14,7 +14,7 @@ const PDFView: React.FC<PDFViewProps> = ({ data }) => {
       <div className="flex justify-between items-start border-b pb-6 mb-8">
         <div>
           <h1 className="text-3xl font-bold text-gray-900 tracking-tight">Reporte de Inspección Diaria</h1>
-          <p className="text-indigo-600 font-semibold mt-1">Checklist Maestro Pro</p>
+          <p className="text-indigo-600 font-semibold mt-1">Checklist Electrico Diario</p>
         </div>
         <div className="text-right">
           <div className="flex items-center justify-end text-gray-600 mb-1">
@@ -32,14 +32,14 @@ const PDFView: React.FC<PDFViewProps> = ({ data }) => {
       <div className="bg-indigo-50 p-6 rounded-xl mb-8 border border-indigo-100">
         <h2 className="text-lg font-bold text-indigo-900 mb-2 flex items-center">
           <User className="mr-2" size={20} />
-          Resumen Ejecutivo
+          Resumen
         </h2>
         <p className="text-gray-700 italic leading-relaxed">
-          "{data.summary || 'Generando resumen profesional...'}"
+          "{data.summary || 'Generando resumen'}"
         </p>
         <div className="mt-4 flex gap-4">
           <div className="px-3 py-1 bg-white rounded-full text-xs font-bold text-indigo-700 border border-indigo-200">
-            Inspector: {data.inspectorName}
+            Voluntario: {data.inspectorName}
           </div>
           <div className="px-3 py-1 bg-white rounded-full text-xs font-bold text-indigo-700 border border-indigo-200">
             Progreso: {data.items.filter(i => i.completed).length}/{data.items.length} completado
@@ -75,8 +75,8 @@ const PDFView: React.FC<PDFViewProps> = ({ data }) => {
 
       {/* Footer */}
       <div className="mt-12 pt-6 border-t flex justify-between items-center text-gray-400 text-[10px] uppercase tracking-[0.2em]">
-        <span>Generado automáticamente por Checklist Maestro Pro</span>
-        <span>© 2024 - Sistema de Gestión de Calidad</span>
+        <span>Checklist Electrico Diario Sabaq</span>
+        <span>© 2026 </span>
       </div>
     </div>
   );
