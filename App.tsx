@@ -149,7 +149,7 @@ const App: React.FC = () => {
       <header className="gradient-bg text-white px-6 py-12 md:py-16 shadow-lg">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center justify-between mb-4">
-            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">Checklist Técnico Maestro</h1>
+            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">Checklist Electrico Diario</h1>
             <div className="bg-white/20 p-2 rounded-lg backdrop-blur-md">
               <CheckCircle2 size={28} />
             </div>
@@ -171,7 +171,7 @@ const App: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Inspector Encargado</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Voluntario Encargado</label>
                 <input 
                   type="text" 
                   value={formData.inspectorName}
@@ -304,7 +304,7 @@ const App: React.FC = () => {
       </main>
 
       <footer className="mt-16 text-center text-gray-400 text-xs tracking-widest uppercase pb-12">
-        <p>© 2024 Checklist Maestro Pro - Sistema de Inspección Industrial</p>
+        <p>© 202 Checklist Electrico - SABAQ</p>
       </footer>
     </div>
   );
